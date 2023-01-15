@@ -1,5 +1,8 @@
 ### Hi there 👋
 
+My name is Daniel, and I'm currently studying a Bootcampo to become Full Stack Software Engineer👨🏻‍💻!
+
+            
 <!--
 **daniArbesu/daniArbesu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
