@@ -1,8 +1,8 @@
 ### Hi there 👋
 
-My name is Daniel, and I'm currently studying a Bootcampo to become Full Stack Software Engineer👨🏻‍💻!
+My name is Daniel, and I'm currently studying a Bootcamp to become Full Stack Software Engineer👨🏻‍💻!
 
-<a href="https://www.linkedin.com/in/danielarbesu/" rel="nofollow"><img src="./linkedin.png" width="24px" style="max-width: 100%;"></a>
+<a href="https://www.linkedin.com/in/danielarbesu/" target="_blank" rel="nofollow"><img src="./linkedin.png" width="24px" style="max-width: 100%;"></a>
             
 <!--
 **daniArbesu/daniArbesu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
