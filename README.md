@@ -1,6 +1,6 @@
-### Hi there 👋
+### Hi there 👋 I'm Daniel Arbesú,
 
-My name is Daniel, and I'm currently studying a Bootcamp to become Full Stack Software Engineer👨🏻‍💻!
+studied Telecommunications Engineering at the university and currently finishing a Bootcamp to become Full Stack Software Engineer👨🏻‍💻!
 
 # 💫 About Me:
 🔭 Currently working on becoming better at Frontend<br>🌱 Currently learning React Native, GraphQL
