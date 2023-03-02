@@ -2,11 +2,8 @@
 
 studied Telecommunications Engineering at the university and currently finishing a Bootcamp to become Full Stack Software Engineer👨🏻‍💻!
 
-# 💫 About Me:
 🔭 Currently working on becoming better at Frontend<br>🌱 Currently learning React Native, GraphQL
 
-
-## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/danielarbesu) 
 
 # 💻 Tech Stack:
