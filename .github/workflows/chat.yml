@@ -3,42 +3,35 @@ name: Generate chat bubble SVG
 on:
   schedule:
     - cron: '0 0 * * *'
-
-env:
-  API_KEY: ${{ secrets.WEATHER_API_KEY }}
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Get current date and weather
-      run: |
-        date=$(date +"%B %d, %Y")
-        weather=$(curl "http://api.openweathermap.org/data/2.5/weather?q=Valencia, es&appid=${API_KEY}&units=metric" | jq '.main.temp')
-        echo "::set-env name=DATE::$date"
-        echo "::set-env name=WEATHER::$weather°C"
+      - name: Generate chat bubble SVG
+        env:
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+        run: node generate-svg.js
 
-    - name: Generate chat bubble SVG
-      run: node generate-svg.js "$DATE" "$WEATHER"
-
-    - name: Commit and push changes
-      uses: actions/github-script@v6
-      with:
-        script: |
-          git config --local user.email "github-actions@example.com"
-          git config --local user.name "GitHub Actions"
-          git add chat-bubble.svg
-          git commit -m "Update chat bubble with current date and weather"
-          git push
+      - name: Commit and push changes
+        uses: actions/github-script@v6
+        with:
+          script: |
+            git config --local user.email "daniel.arbesu.sanchez@gmail.com"
+            git config --local user.name "Daniel Arbesú"
+            git add "*.svg"
+            git commit -m "Update chat bubble with current date and weather"
+            git push
