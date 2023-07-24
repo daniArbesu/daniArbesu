@@ -27,11 +27,9 @@ jobs:
         run: node generate-svg.js
 
       - name: Commit and push changes
-        uses: actions/github-script@v6
+        uses: EndBug/add-and-commit@v4
         with:
-          script: |
-            git config --local user.email "daniel.arbesu.sanchez@gmail.com"
-            git config --local user.name "Daniel Arbesú"
-            git add "*.svg"
-            git commit -m "Update chat bubble with current date and weather"
-            git push
+          author_name: Daniel Arbesú
+          author_email: daniel.arbesu.sanchez@gmail.com
+          message: 'Update chat bubble with current date and weather'
+          add: '*.svg'
