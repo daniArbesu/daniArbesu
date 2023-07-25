@@ -35,7 +35,7 @@ const dayBubbleWidths = {
 
 // Day of the week today
 const today = new Date();
-const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(today);
+const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long', timeZone: 'Europe/Madrid'}).format(today);
 
 // Today's weather
 const url = `${WEATHER_DOMAIN}/weather?q=${CURRENT_LOCATION_CITY}&appid=${WEATHER_API_KEY}&units=metric`;
