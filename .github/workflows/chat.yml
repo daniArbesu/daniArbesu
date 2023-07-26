@@ -27,7 +27,7 @@ jobs:
         run: node generate-svg.js
 
       - name: Commit and push changes
-        uses: EndBug/add-and-commit@v4
+        uses: EndBug/add-and-commit@v9
         with:
           author_name: Daniel Arbesú
           author_email: daniel.arbesu.sanchez@gmail.com
