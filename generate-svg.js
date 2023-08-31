@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+// eslint-disable-next-line import/no-extraneous-dependencies
 import 'dotenv/config';
 import fs from 'fs';
 import fetch from 'node-fetch';
@@ -35,16 +36,20 @@ const dayBubbleWidths = {
 
 // Day of the week today
 const today = new Date();
-const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long', timeZone: 'Europe/Madrid'}).format(today);
+const todayDay = new Intl.DateTimeFormat('en-US', {
+  weekday: 'long',
+  timeZone: 'Europe/Madrid'
+}).format(today);
 
 // Today's weather
-const url = `${WEATHER_DOMAIN}/weather?q=${CURRENT_LOCATION_CITY}&appid=${WEATHER_API_KEY}&units=metric`;
+const url = `${WEATHER_DOMAIN}/forecast?q=${CURRENT_LOCATION_CITY}&appid=${WEATHER_API_KEY}&units=metric`;
 
 try {
   const response = await fetch(url);
-  const locationWeather = await response.json();
+  const listWeather = await response.json();
+  const locationWeather = listWeather.list[0];
 
-  if (locationWeather.cod === 200) {
+  if (listWeather.cod === '200') {
     const degC = Math.round(locationWeather.main.temp_max);
     const { icon } = locationWeather.weather[0];
 
